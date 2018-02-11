@@ -1,0 +1,11 @@
+{
+  "name": "sic",
+  "version": "1.0.0",
+  "description": "Student Information Center",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayank Agarwal",
+  "license": "ISC"
+}

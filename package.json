@@ -4,7 +4,7 @@
   "description": "Student Information Center",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass":"node-sass public/sass/main.scss public/css/style.css -w"
   },
   "author": "Mayank Agarwal",
   "license": "ISC",

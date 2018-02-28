@@ -1,7 +1,7 @@
 
 <?php
-
-
+ob_start();
+  
 define("PRIVATE_PATH", dirname(__FILE__));
 define("PROJECT_PATH", dirname(PRIVATE_PATH));
 define("PUBLIC_PATH", PROJECT_PATH . '/public');
@@ -12,5 +12,8 @@ $root = substr($_SERVER['SCRIPT_NAME'],0,$public_len);
 define("WWW_ROOT", $root);
 
 require_once('functions.php');
+require_once('database.php');
+
+$db = db_connect();
 
 ?>

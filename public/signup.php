@@ -18,18 +18,18 @@
                             <div class="col-1-of-2">
                                 <div class="form__group">
                                     <label for="namef" class="form__label">First Name</label>
-                                    <input type="text" class="form__input" placeholder="First Name" id="namef" name="namef" required>
+                                    <input type="text" onblur="checkString(this);" onkeyup="checkString(this);" class="form__input" placeholder="First Name" id="namef" name="namef" required>
                                </div>
                                 <div class="form__group">
                                     <label for="namel" class="form__label">Last Name</label>
-                                    <input type="text" class="form__input" placeholder="Last Name" id="namel" name="namel" required>
+                                    <input type="text" class="form__input" onblur="checkString(this);" onkeyup="checkString(this);" placeholder="Last Name" id="namel" name="namel" required>
                                 </div>
 
                                 <div class="form__group">
                                     <label for="email" class="form__label">Email</label>
                                     <div class="row">
                                         <div class="col-1-of-2">  
-                                            <input type="text" class="form__input_small" placeholder="example199X" id="email" name="email" required>
+                                            <input type="text" class="form__input_small" placeholder="example199X" id="email" name="email" required onblur="checkEmail(this);" onkeyup="checkEmail(this);">
                                         </div>
                                         <div class="col-1-of-2">
                                             <input list="emaildom" class="form__input_small" placeholder="@gmail.com" name="emaildom" required>
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="form__group">
                                     <label for="cpwd" class="form__label">ReEnter Password</label>
-                                    <input type="password" class="form__input" placeholder="Confirm Password" id="cpwd" name="cpwd" required>
+                                    <input type="password" class="form__input" placeholder="Confirm Password" id="cpwd" name="cpwd" onblur="checkPwdb(this);" onkeyup="checkPwd(this);" required>
                                 </div>
                                 <div class="form__group">
                                     <label for="add" class="form__label">Address</label>
@@ -64,7 +64,7 @@
                             <div class="col-1-of-2">
                                 <div class="form__group">
                                     <label for="citycol" class="form__label">City</label>
-                                    <input type="text" class="form__input" placeholder="City" id="citycol" name="citycol" required>
+                                    <input type="text" class="form__input" onblur="checkString(this);" onkeyup="checkString(this);" placeholder="City" id="citycol" name="citycol" required>
                                 </div>
                                 <div class="form__group">
                                     <label for="statecol" class="form__label">State</label>
@@ -118,11 +118,11 @@
                                 </div>
                                 <div class="form__group">
                                     <label for="tel" class="form__label">Phone No.</label>
-                                    <input type="number" class="form__input" placeholder="Phone" id="tel" name="tel" min="1000000000" max="9999999999" required>
+                                    <input type="number" class="form__input" placeholder="Phone" id="tel" name="tel" min="1000000000" max="9999999999" onblur="checkPhone(this);" onkeyup="checkPhone(this);" required>
                                 </div>
                                 <div class="form__group">
                                     <label for="tel-alt" class="form__label">Alternate Phone No.</label>
-                                    <input type="number" class="form__input" placeholder="Phone" id="tel-alt" name="tel-alt" min="1000000000" max="9999999999" required>
+                                    <input type="number" class="form__input" placeholder="Phone" id="tel-alt" name="tel-alt" min="1000000000" max="9999999999" onblur="checkPhone(this);" onkeyup="checkPhone(this);"  required>
                                 </div>
                                 <br>
                                 <div class="form__group">

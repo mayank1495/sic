@@ -50,20 +50,18 @@ input[type=submit]:hover {
 }
 */
 
-
 /***************************************************************************/
 
-.sign{
+.sign {
     text-align: center;
     color: #074e4e;
     margin-bottom: 3rem;
 }
 
-form h2{
+form h2 {
     color: #14a8a8;
     margin-bottom: 1.5rem;
 }
-
 
 .form__input {
     font-size: 1.5rem;
@@ -80,23 +78,27 @@ form h2{
     transition: all .3s;
 }
 
-
 .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55c57a;
-/*    font-weight: 700;*/
-/*    color: black;*/
+    /*    font-weight: 700;*/
+    /*    color: black;*/
     color: #0b6464;
 }
 
 .form__input:focus:invalid {
     border-bottom: 3px solid #ff7730;
 }
+/* 
+.inv {
+    border-bottom: 3px solid #ff7730;
+} */
 
 .form__input::-webkit-input-placeholder {
     color: #999;
 }
+
 .form__input_small {
     font-size: 1.5rem;
     font-family: inherit;
@@ -112,13 +114,12 @@ form h2{
     transition: all .3s;
 }
 
-
 .form__input_small:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55c57a;
-/*    font-weight: 700;*/
-/*    color: black;*/
+    /*    font-weight: 700;*/
+    /*    color: black;*/
     color: #0b6464;
 }
 
@@ -146,13 +147,12 @@ form h2{
     transition: all .3s;
 }
 
-
 .form__input_big:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55c57a;
-/*    font-weight: 700;*/
-/*    color: black;*/
+    /*    font-weight: 700;*/
+    /*    color: black;*/
     color: #0b6464;
 }
 
@@ -163,6 +163,7 @@ form h2{
 .form__input_big::-webkit-input-placeholder {
     color: #999;
 }
+
 .form__input_med {
     font-size: 1.5rem;
     font-family: inherit;
@@ -179,13 +180,12 @@ form h2{
     transition: all .3s;
 }
 
-
 .form__input_med:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid #55c57a;
-/*    font-weight: 700;*/
-/*    color: black;*/
+    /*    font-weight: 700;*/
+    /*    color: black;*/
     color: #0b6464;
 }
 
@@ -196,6 +196,7 @@ form h2{
 .form__input_med::-webkit-input-placeholder {
     color: #999;
 }
+
 .form__label {
     font-size: 1.5rem;
     font-weight: 700;
@@ -210,7 +211,6 @@ form h2{
     margin: 0 auto;
     background-color: rgba(243, 243, 243, 0.65);
     padding: 6rem;
-    
 }
 
 .sbmt {
@@ -218,13 +218,13 @@ form h2{
     text-align: center;
 }
 
-.in-btn{
+.in-btn {
     background-color: darkcyan;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
     padding: 1.5rem 2rem;
-/*    margin: 8px 0;*/
+    /*    margin: 8px 0;*/
     border: none;
     border-radius: 5rem;
     cursor: pointer;
@@ -232,6 +232,6 @@ form h2{
     margin-right: 2rem;
 }
 
-.in-btn:hover{
-     background-color: cyan;
+.in-btn:hover {
+    background-color: cyan;
 }

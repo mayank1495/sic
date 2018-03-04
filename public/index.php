@@ -3,7 +3,13 @@
 
 <?php include(SHARED_PATH . '/home_header.php'); ?>
 
-<h1> hi </h1>
+ 
+ <section id="welcome">
+        <div class="wlm">
+            <h1>Welcome to Student Information Center</h1> <br>
+            <h3>Login/Signup to continue</h3>
+        </div>
+</section>
 
 
 <?php include(SHARED_PATH . '/home_footer.php'); ?>

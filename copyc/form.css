@@ -1,0 +1,237 @@
+/*
+input[type=text] ,input[type=password],input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+        
+input[type=submit] {
+    background-color: darkcyan;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: cyan;
+    margin-top: 50px;
+}
+
+.form{
+    text-align: center;
+    padding-top: 50px;
+    height: 300px;
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+#welcome{
+    height: 580px;
+}
+*/
+
+/*
+.sign{
+    padding-top: 50px;
+    height: 580px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+*/
+
+
+/***************************************************************************/
+
+.sign{
+    text-align: center;
+    color: #074e4e;
+    margin-bottom: 3rem;
+}
+
+form h2{
+    color: #14a8a8;
+    margin-bottom: 1.5rem;
+}
+
+
+.form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#fff, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+}
+
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a;
+/*    font-weight: 700;*/
+/*    color: black;*/
+    color: #0b6464;
+}
+
+.form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730;
+}
+
+.form__input::-webkit-input-placeholder {
+    color: #999;
+}
+.form__input_small {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#fff, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 70%;
+    display: block;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+}
+
+
+.form__input_small:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a;
+/*    font-weight: 700;*/
+/*    color: black;*/
+    color: #0b6464;
+}
+
+.form__input_small:focus:invalid {
+    border-bottom: 3px solid #ff7730;
+}
+
+.form__input_small::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form__input_big {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#fff, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    height: 200px;
+    display: block;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+}
+
+
+.form__input_big:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a;
+/*    font-weight: 700;*/
+/*    color: black;*/
+    color: #0b6464;
+}
+
+.form__input_big:focus:invalid {
+    border-bottom: 3px solid #ff7730;
+}
+
+.form__input_big::-webkit-input-placeholder {
+    color: #999;
+}
+.form__input_med {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#fff, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    height: 100px;
+    display: block;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    transition: all .3s;
+}
+
+
+.form__input_med:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #55c57a;
+/*    font-weight: 700;*/
+/*    color: black;*/
+    color: #0b6464;
+}
+
+.form__input_med:focus:invalid {
+    border-bottom: 3px solid #ff7730;
+}
+
+.form__input_med::-webkit-input-placeholder {
+    color: #999;
+}
+.form__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    padding-bottom: 1rem;
+    display: block;
+    transition: all .3s;
+}
+
+.signup {
+    margin: 0 auto;
+    background-color: rgba(243, 243, 243, 0.65);
+    padding: 6rem;
+    
+}
+
+.sbmt {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.in-btn{
+    background-color: darkcyan;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 1.5rem 2rem;
+/*    margin: 8px 0;*/
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.in-btn:hover{
+     background-color: cyan;
+}

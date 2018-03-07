@@ -39,20 +39,35 @@ var checkEmail = function (form) {
 
 var checkPhone = function (form) {
     var lenp = form.value.length;
-    setInvalid(!(lenp==10),form);
+    setInvalid(!(lenp == 10), form);
 }
 
-var checkPwd=function(form){
-    pwd=document.querySelector("#pwd");
+var checkPwd = function (form) {
+    pwd = document.querySelector("#pwd");
     // print(pwd);
-    setInvalid(form.value!=pwd.value,form);
+    setInvalid(form.value != pwd.value, form);
 }
 
-var checkPwdb=function(form){
-    pwd=document.querySelector("#pwd");
+var checkPwdb = function (form) {
+    pwd = document.querySelector("#pwd");
     // print(pwd);
-    if(pwd.value!=form.value)
-     pwd.focus();
+    if (pwd.value != form.value)
+        pwd.focus();
+}
+
+var disSg = function (form) {
+    var sem = parseInt(form.value);
+    print(typeof sem);
+    // var i = sem+1;
+    // print("sg"+i);
+    for(var i=1;i<=8;i++){
+        document.getElementById("sg"+i).disabled=false;
+    }
+    for (var i = sem + 1; i <= 8; i = i + 1) {
+        // console.log(i);
+        document.getElementById("sg" + i).disabled = true;
+    }
+    // document.getElementById(`sg${i}`).disabled = true;
 }
 
 

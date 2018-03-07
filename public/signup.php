@@ -212,7 +212,7 @@
                                 </div>
                                 <div class="form__group">
                                     <label for="sem" class="form__label">Semester</label>
-                                    <input type="number" class="form__input" placeholder="Semester" id="sem" name="sem" step="1.0" min="1" max="8.0" required>
+                                    <input type="number" class="form__input" placeholder="Semester" id="sem" name="sem" step="1.0" min="1" max="8.0" onblur="disSg(this);" required>
                                 </div>
                                 <div class="form__group">
                                     <label for="cg" class="form__label">CGPA</label>

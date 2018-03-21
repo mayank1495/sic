@@ -341,7 +341,7 @@
                                     </div>
                                     <div class="form__group">
                                         <label for="sccit12" class="form__label">City</label>
-                                        <input type="text" class="form__input" placeholder="Kolkata" id="sccit12" name="sccit12" required>
+                                        <input type="text" class="form__input" placeholder="Kolkata" id="sccit12" onblur="checkString(this);" onkeyup="checkString(this);" name="sccit12" required>
                                     </div>
                                     <div class="form__group">
                                     <label for="state12" class="form__label">State</label>
@@ -420,7 +420,7 @@
                                     </div>
                                     <div class="form__group">
                                         <label for="sccit11" class="form__label">City</label>
-                                        <input type="text" class="form__input" placeholder="Kolkata" id="sccit11" name="sccit11" required>
+                                        <input type="text" class="form__input" placeholder="Kolkata" id="sccit11" name="sccit11" onblur="checkString(this);" onkeyup="checkString(this);" required>
                                     </div>
                                     <div class="form__group">
                                     <label for="state11" class="form__label">State</label>
@@ -499,7 +499,7 @@
                                     </div>
                                     <div class="form__group">
                                         <label for="sccit10" class="form__label">City</label>
-                                        <input type="text" class="form__input" placeholder="Kolkata" id="sccit10" name="sccit10" required>
+                                        <input type="text" class="form__input" placeholder="Kolkata" id="sccit10" name="sccit10" onblur="checkString(this);" onkeyup="checkString(this);" required>
                                     </div>
                                     <div class="form__group">
                                     <label for="state10" class="form__label">State</label>
@@ -578,7 +578,7 @@
                                     </div>
                                     <div class="form__group">
                                         <label for="sccit9b" class="form__label">City</label>
-                                        <input type="text" class="form__input" placeholder="Kolkata" id="sccit9b" name="sccit9b" required>
+                                        <input type="text" class="form__input" placeholder="Kolkata" id="sccit9b" name="sccit9b" onblur="checkString(this);" onkeyup="checkString(this);" required>
                                     </div>
                                     <div class="form__group">
                                     <label for="state9b" class="form__label">State</label>

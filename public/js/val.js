@@ -60,8 +60,8 @@ var disSg = function (form) {
     print(typeof sem);
     // var i = sem+1;
     // print("sg"+i);
-    for(var i=1;i<=8;i++){
-        document.getElementById("sg"+i).disabled=false;
+    for (var i = 1; i <= 8; i++) {
+        document.getElementById("sg" + i).disabled = false;
     }
     for (var i = sem + 1; i <= 8; i = i + 1) {
         // console.log(i);

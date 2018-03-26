@@ -1,6 +1,8 @@
 
 <?php
 ob_start();
+
+session_start();
   
 define("PRIVATE_PATH", dirname(__FILE__));
 define("PROJECT_PATH", dirname(PRIVATE_PATH));
@@ -13,6 +15,7 @@ define("WWW_ROOT", $root);
 
 require_once('functions.php');
 require_once('database.php');
+require_once('auth_function.php');
 
 $db = db_connect();
 

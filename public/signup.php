@@ -18,7 +18,7 @@
                             <div class="col-1-of-2">
                                 <div class="form__group">
                                     <label for="namef" class="form__label">First Name</label>
-                                    <input type="text" onblur="checkString(this);" onkeyup="checkString(this);" class="form__input" value="First Name" id="namef" name="namef" required disabled>
+                                    <input type="text" onblur="checkString(this);" onkeyup="checkString(this);" class="form__input" value="First Name" id="namef" name="namef" required>
                                </div>
                                 <div class="form__group">
                                     <label for="namel" class="form__label">Last Name</label>
@@ -212,7 +212,7 @@
                                 </div>
                                 <div class="form__group">
                                     <label for="sem" class="form__label">Semester</label>
-                                    <input type="number" class="form__input" placeholder="Semester" id="sem" name="sem" step="1.0" min="1" max="8.0"  required>
+                                    <input type="number" class="form__input" placeholder="Semester" id="sem" name="sem" step="1.0" min="1" max="8.0"  onblur="disSg(this);" required>
                                     <!-- onblur="disSg(this);" -->
                                 </div>
                                 <div class="form__group">

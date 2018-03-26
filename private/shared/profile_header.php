@@ -16,7 +16,7 @@
             <ul>
                 <!-- <li><a href="index.php">Home</a></li> -->
                 <li><a href="signup.php">Modify</a></li>
-                <li><a href="login.php">Logout</a></li>
+                <li><a href="logout.php">Logout</a></li>
                 <!-- <li><a href="about.php">About</a></li> -->
             </ul>
         </nav>

@@ -10,7 +10,7 @@
             </div>
             <div>
                 <div class="row">
-                    <form action="" class="form" name="form" method="post">
+                    <form action="procs.php" class="form" name="form" method="post">
                         <div class="row">
                             <div>
                                 <h2>Important Details</h2>
@@ -18,7 +18,7 @@
                             <div class="col-1-of-2">
                                 <div class="form__group">
                                     <label for="namef" class="form__label">First Name</label>
-                                    <input type="text" onblur="checkString(this);" onkeyup="checkString(this);" class="form__input" placeholder="First Name" id="namef" name="namef" required>
+                                    <input type="text" onblur="checkString(this);" onkeyup="checkString(this);" class="form__input" value="First Name" id="namef" name="namef" required disabled>
                                </div>
                                 <div class="form__group">
                                     <label for="namel" class="form__label">Last Name</label>
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="form__group">
                                     <label for="add" class="form__label">Address</label>
-                                    <input type="text" class="form__input_big" placeholder="Address" id="add" name="add" required>
+                                    <input type="text" class="form__input_big" placeholder="Address" id="add" name="addr" required>
                                 </div>
                             </div>
                             <div class="col-1-of-2">
@@ -121,8 +121,8 @@
                                     <input type="number" class="form__input" placeholder="Phone" id="tel" name="tel" min="1000000000" max="9999999999" onblur="checkPhone(this);" onkeyup="checkPhone(this);" required>
                                 </div>
                                 <div class="form__group">
-                                    <label for="tel-alt" class="form__label">Alternate Phone No.</label>
-                                    <input type="number" class="form__input" placeholder="Phone" id="tel-alt" name="tel-alt" min="1000000000" max="9999999999" onblur="checkPhone(this);" onkeyup="checkPhone(this);"  required>
+                                    <label for="telalt" class="form__label">Alternate Phone No.</label>
+                                    <input type="number" class="form__input" placeholder="Phone" id="telalt" name="telalt" min="1000000000" max="9999999999" onblur="checkPhone(this);" onkeyup="checkPhone(this);"  required>
                                 </div>
                                 <br>
                                 <div class="form__group">
@@ -212,7 +212,8 @@
                                 </div>
                                 <div class="form__group">
                                     <label for="sem" class="form__label">Semester</label>
-                                    <input type="number" class="form__input" placeholder="Semester" id="sem" name="sem" step="1.0" min="1" max="8.0" onblur="disSg(this);" required>
+                                    <input type="number" class="form__input" placeholder="Semester" id="sem" name="sem" step="1.0" min="1" max="8.0"  required>
+                                    <!-- onblur="disSg(this);" -->
                                 </div>
                                 <div class="form__group">
                                     <label for="cg" class="form__label">CGPA</label>
@@ -424,7 +425,7 @@
                                     </div>
                                     <div class="form__group">
                                     <label for="state11" class="form__label">State</label>
-                                    <input list="state11" class="form__input" placeholder="1State" name="state12" required>
+                                    <input list="state11" class="form__input" placeholder="1State" name="state11" required>
                                     <datalist id="state11">
                                         <option value="Andaman & Nicobar Islands">
                                         <option value="Andhra Pradesh" >
@@ -480,7 +481,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div>
                                     <br><h3 align="center">Class 10</h3><br>
                                 </div>
@@ -661,10 +662,10 @@
                                 </div>
                             </div>
                             
-                        </div>
+                        </div> -->
                         <div class="row sbmt">
-                            <input type="submit" class="in-btn" id="sub">
-                            <input type="reset" class="in-btn">
+                            <input type="submit" class="in-btn" id="sub" name="submit">
+                            <input type="reset" class="in-btn" name="reset">
                         </div>
                     </form>
                 </div>

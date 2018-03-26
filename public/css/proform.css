@@ -1,0 +1,59 @@
+/***************************************************************************/
+
+.sign {
+    text-align: center;
+    color: #074e4e;
+    margin-bottom: 3rem;
+}
+
+.form h2 {
+    color: #14a8a8;
+    margin-bottom: 1.5rem;
+}
+
+.form h5 {
+    font-size: 18px;
+    color: #074e4e;
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+
+.form__label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    /* padding-bottom: 1rem; */
+    display: block;
+    transition: all .3s;
+}
+
+.signup {
+    margin: 0 auto;
+    background-color: rgba(243, 243, 243, 0.65);
+    padding: 6rem;
+}
+
+.sbmt {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.in-btn {
+    background-color: darkcyan;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 1.5rem 2rem;
+    /*    margin: 8px 0;*/
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.in-btn:hover {
+    background-color: cyan;
+}

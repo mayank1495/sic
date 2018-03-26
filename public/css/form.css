@@ -78,6 +78,14 @@ form h2 {
     transition: all .3s;
 }
 
+input[value]{
+    color: #0b6464;
+    font-size: 18px;
+}
+input[disabled]{
+    background-color: white;
+}
+
 .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -98,6 +106,7 @@ form h2 {
 .form__input::-webkit-input-placeholder {
     color: #999;
 }
+
 
 .form__input_small {
     font-size: 1.5rem;

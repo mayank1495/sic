@@ -2,6 +2,7 @@
 
 <?php
 
+$errors=[];
 if(is_post_request())
 {
     // echo 
@@ -11,8 +12,8 @@ if(is_post_request())
     {
         exit("Database query failed.");
     }
-    
     $std=mysqli_fetch_assoc($res);
+    $login_failure_msg = "Log in was unsuccessful.";
     if($std)
     {
         if(password_verify($_POST['password'],$std['pwd']))
@@ -22,12 +23,12 @@ if(is_post_request())
         }
         else
         {
-            echo "login failure.";
+            $errors[] = $login_failure_msg;
         }
     }
     else
     {
-        echo "Login failure..";
+        $errors[] = $login_failure_msg;
     }
 }
 
@@ -46,6 +47,7 @@ if(is_post_request())
 
         <div>
             <div class="row">
+            <?php echo display_errors($errors); ?>
                 <form action="" class="form" method="post">
                     <div class="row">
 

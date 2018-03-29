@@ -32,6 +32,13 @@
     return isset($_SESSION['std_id']);
   }
 
+  function is_logged_in_direct() {
+    if(isset($_SESSION['admin_id']))
+     return "adm";
+    if(isset($_SESSION['std_id']))
+     return "stu";
+  }
+
   // Call require_login() at the top of any page which needs to
   // require a valid login before granting acccess to the page.
   function require_login() {

@@ -4,7 +4,7 @@
             <h5>&copy;SIC by NITD</h5>
         </div>
     </footer>
-    <script src="js/val.js"></script>
+    <script src="<?php echo url_for('/js/val.js')?>"></script>
 </body>
 
 </html>

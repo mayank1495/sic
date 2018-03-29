@@ -5,9 +5,9 @@
     <title>Student Information Centre</title>
 </head>
 
-<link rel="stylesheet" href="css/grid.css">
-<link rel="stylesheet" href="css/hstyle.css">
-<link rel="stylesheet" href="css/form.css">
+<link rel="stylesheet" href="<?php echo url_for('/css/grid.css')?>">
+<link rel="stylesheet" href="<?php echo url_for('/css/hstyle.css')?>">
+<link rel="stylesheet" href="<?php echo url_for('/css/form.css')?>">
 
 <body>
 

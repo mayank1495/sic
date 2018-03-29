@@ -1,5 +1,21 @@
 <?php require_once('../private/initialize.php'); ?>
 
+<?php
+
+$error=[];
+$msg="User Already exists.";
+if(isset($_GET['err'])){
+// echo "i up";
+$err=$_GET['err']?$_GET['err']:0;
+if($err==1)
+{
+    $error[]=$msg;
+    $err=0;
+    // redirect_to('signup.php');
+}
+}
+?>
+
 <?php include(SHARED_PATH . '/home_header.php'); ?>
 
     <section>
@@ -10,6 +26,7 @@
             </div>
             <div>
                 <div class="row">
+                <?php echo display_errors($error) ?>
                     <form action="procs.php" class="form" name="form" method="post">
                         <div class="row">
                             <div>
@@ -18,7 +35,7 @@
                             <div class="col-1-of-2">
                                 <div class="form__group">
                                     <label for="namef" class="form__label">First Name</label>
-                                    <input type="text" onblur="checkString(this);" onkeyup="checkString(this);" class="form__input" value="First Name" id="namef" name="namef" required>
+                                    <input type="text" onblur="checkString(this);" onkeyup="checkString(this);" class="form__input" placeholder="First Name" id="namef" name="namef" required>
                                </div>
                                 <div class="form__group">
                                     <label for="namel" class="form__label">Last Name</label>

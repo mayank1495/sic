@@ -2,18 +2,31 @@
 
 <?php
 
-$error=[];
+$errors=[];
 $msg="User Already exists.";
-if(isset($_GET['err'])){
-// echo "i up";
-$err=$_GET['err']?$_GET['err']:0;
-if($err==1)
+
+if(is_post_request())
 {
-    $error[]=$msg;
-    $err=0;
-    // redirect_to('signup.php');
+    $std=check_if_student_exists();
+    if(!$std) {
+        $errors=[];
+        $data=get_fields_and_values();
+        insert_into_stu($data);
+    } else {
+        $errors[]=$msg;
+    }
 }
-}
+// else if(isset($_GET['err'])) {
+
+//     $err=$_GET['err']?$_GET['err']:0;
+//     if($err==1)
+//     {
+//         $errors[]=$msg;
+//         $err=0;
+//         // redirect_to('signup.php');
+//     }
+// }
+
 ?>
 
 <?php include(SHARED_PATH . '/home_header.php'); ?>
@@ -26,8 +39,8 @@ if($err==1)
             </div>
             <div>
                 <div class="row">
-                <?php echo display_errors($error) ?>
-                    <form action="procs.php" class="form" name="form" method="post">
+                <?php echo display_errors($errors) ?>
+                    <form action="" class="form" name="form" method="post">
                         <div class="row">
                             <div>
                                 <h2>Important Details</h2>

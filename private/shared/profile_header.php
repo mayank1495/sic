@@ -14,7 +14,7 @@
     <header>
         <nav id="navbar">
             <ul>
-                <li><a href="stupro.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="edit.php">Modify</a></li>
                 <li><a href="chpwd.php">Change Password</a></li>
                 <li><a href="logout.php">Logout</a></li>

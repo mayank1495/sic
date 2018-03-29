@@ -25,6 +25,14 @@ function redirect_to($location) {
 	exit;
 }
 
+function admin() {
+	redirect_to(url_for('/admin/index.php'));
+}
+
+function student() {
+	redirect_to(url_for('/student/index.php'));
+}
+
 function is_post_request() {
 	return $_SERVER['REQUEST_METHOD'] == 'POST';
 }

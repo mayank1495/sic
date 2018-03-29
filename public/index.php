@@ -1,6 +1,8 @@
 
 <?php require_once('../private/initialize.php'); ?>
 
+<?php  is_login_active() ?>
+
 <?php include(SHARED_PATH . '/home_header.php'); ?>
 
  

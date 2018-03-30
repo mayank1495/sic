@@ -70,6 +70,18 @@ var disSg = function (form) {
     // document.getElementById(`sg${i}`).disabled = true;
 }
 
+// var colorit = function () {
+    // var access=document.querySelector(".std_access");
+    var access=document.getElementsByClassName('std_access');
+    console.log(access);
+    for(var i=0; i<access.length;i++)
+    if(access[i].innerHTML=='Approve') {
+        access[i].style.color="green";
+    }else{
+        access[i].style.color="red";
+    }
+// }
+
 
 
 // document.querySelector("#sub").addEventListener('click',function(){

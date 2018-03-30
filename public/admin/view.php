@@ -1,17 +1,44 @@
 <?php require_once('../../private/initialize.php'); ?>
-<?php require_login("student"); ?>
+<?php require_login("admin"); ?>
 
 <?php
-    $query="SELECT * FROM stu where id='".$_SESSION['std_id']."'";
-    $res=mysqli_query($db,$query);
-    if(!$res)
-    {
-        exit("Query failed..");
-    }
-    $std=mysqli_fetch_assoc($res);
+if(is_get_request()) {
+
+    if(isset($_GET['id'])) {
+        $std=find_user_by_id($_GET['id'],'student');
+        if(!$std) {
+            redirect_to(url_for('/admin/index.php'));    
+        }
+    }else {
+        redirect_to(url_for('/admin/index.php'));
+    }   
+}
 ?>
 
-<?php include(SHARED_PATH . '/profile_header.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information Centre</title>
+</head>
+
+<link rel="stylesheet" href="<?php echo url_for('/css/grid.css' )?>">
+<link rel="stylesheet" href="<?php echo url_for('/css/hstyle.css' )?>">
+<link rel="stylesheet" href="<?php echo url_for('/css/form.css' )?>">
+<link rel="stylesheet" href="<?php echo url_for('/css/tbl.css' )?>">
+<body>
+
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.php">Back to Home</a></li>
+                <!-- <li><a href="edit.php">Modify</a></li>
+                <li><a href="chpwd.php">Change Password</a></li> -->
+                <li><a href="logout.php">Logout</a></li>
+                <!-- <li><a href="about.php">About</a></li> -->
+            </ul>
+        </nav>
+    </header>
 
 <section>
 

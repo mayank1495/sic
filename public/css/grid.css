@@ -3,6 +3,11 @@
     margin: 0 auto;
 }
 
+/* .container {
+    min-height:100%;
+    position: relative;
+} */
+
 .row:not(:last-child) {
     margin-bottom: 8rem;
 }

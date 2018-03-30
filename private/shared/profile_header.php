@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="<?php echo url_for('/css/form.css' )?>">
 <link rel="stylesheet" href="<?php echo url_for('/css/tbl.css' )?>">
 <body>
-
+  <!-- <div class="container"> -->
     <header>
         <nav id="navbar">
             <ul>

@@ -227,7 +227,8 @@ input[disabled]{
     font-weight: 700;
     margin-left: 2rem;
     margin-top: .7rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
     display: block;
     transition: all .3s;
 }

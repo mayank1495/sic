@@ -54,20 +54,20 @@ if(is_post_request())
                             </div>
                             <div class="form__group">
                                 <input type="email" class="form__input" placeholder="Email" id="email" required name="email">
-                                <label for="email" class="form__label">Email</label>
+                                <label for="email" class="form__label" style="padding-top: 0.3rem; padding-bottom: 1.5rem;">Email</label>
                             </div>
                             <div class="form__group">
                                 <input type="password" class="form__input" placeholder="Password" id="pwd" required name='password'>
                                 <div class="row">
                                     <div class="col-1-of-3">
-                                        <label for="pwd" class="form__label">Password</label>
+                                        <label for="pwd" class="form__label" style="padding-top: 0.3rem; padding-bottom: 1rem;">Password</label>
                                     </div>
-                                    <div class="col-1-of-3">
-                                        <a href="#" style="text-decoration: underline; color: black; font-size: 14px;">Forget Password ?</a>
+                                    <div class="col-1-of-3" style="padding-top: 0.3rem; padding-bottom: 1rem;">
+                                        <a href="#" style="text-decoration: underline; color: black; font-size: 14px; ">Forget Password ?</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form__group" style="margin-left:10px; margin-bottom:10px;">
+                            <div class="form__group" style="margin-left:10px; margin-bottom:10px; margin-top: 10px;">
                                     <div class="row">
                                         <div class="col-1-of-4">
                                             <label for="gn">USER: </label>

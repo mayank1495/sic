@@ -18,7 +18,7 @@ if(isset($_GET['id']))
 
 <?php include(SHARED_PATH.'/profile_header.php') ?>
 
-<section>
+<section style="height: 85vh;">
 
     <div class="row">
         <table id="students">
@@ -38,8 +38,8 @@ if(isset($_GET['id']))
                 <td><?php echo $student['email']?></td>
                 <td><?php echo $student['degree']?></td>
                 <td><?php echo $student['rollyr'].'/'.$student['rolld'].'/'.$student['rolln']?></td>
-                <td><a href="#">View</a></td>
-                <td><a href="index.php?id=<?php echo $student['id'] ?>&amp;access=<?php echo $student['access'] ?>"><?php echo $access_link[$student['access']] ?></a></td>
+                <td><a href="view.php?id=<?php echo $student['id']?>" id="std_view" style="color: #074e4e;">View</a></td>
+                <td><a class="std_access" href="index.php?id=<?php echo $student['id'] ?>&amp;access=<?php echo $student['access'] ?>"><?php echo $access_link[$student['access']] ?></a></td>
             </tr>
             <?php } ?>
         </table>

@@ -10,18 +10,34 @@ function find_all_students() {
     return $result;
 }
 
-function find_student_by_email($email) {
+function find_user_by_id($id,$user="") {
     global $db;
 
-    $query="SELECT * FROM stu where email='";
-    $query.=$email;
-    $query.="'" ;
+    if($user=="student") {
+        $query="SELECT * FROM stu WHERE id='";
+    }else {
+        $query="SELECT * FROM admins WHERE id='";
+    }
 
-    $result = mysqli_query($db,$query);
+    $query.=$id."'";
+    $result=mysqli_query($db,$query);
     confirm_result_set($result);
-    $std = mysqli_fetch_assoc($result);
-    return $std;
+    $usr=mysqli_fetch_assoc($result);
+    return $usr;
 }
+
+// function find_student_by_email($email) {
+//     global $db;
+
+//     $query="SELECT * FROM stu where email='";
+//     $query.=$email;
+//     $query.="'" ;
+
+//     $result = mysqli_query($db,$query);
+//     confirm_result_set($result);
+//     $std = mysqli_fetch_assoc($result);
+//     return $std;
+// }
 
 function has_access($user) {
     
@@ -111,3 +127,33 @@ function insert_into_stu($data) {
     }
 }
 
+function get_pwd($id,$user) {
+    global $db;
+
+    if($user="student") {
+        $query="SELECT pwd FROM stu WHERE id='";
+    }else {
+        $query="SELECT pwd FROM admins WHERE id='";
+    }
+    $query.=$id."'";
+
+    $result=mysqli_query($db,$query);
+    confirm_result_set($result);
+    $usr=mysqli_fetch_assoc($result);
+    return $usr['pwd'];
+}
+
+function change_pwd($pwd,$id,$user) {
+    global $db;
+
+    $pwd=password_hash($pwd,PASSWORD_BCRYPT);
+    if($user="student") {
+        $query="UPDATE stu SET pwd='";
+    }else {
+        $query="UPDATE admins SET pwd='";
+    }
+    $query.=$pwd."' ";
+    $query.="WHERE id='";
+    $query.=$id."'";
+    $result=mysqli_query($db,$query);
+}

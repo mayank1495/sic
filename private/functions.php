@@ -54,7 +54,20 @@ function display_errors($errors=array()) {
 	  $output .= "</div>";
 	}
 	return $output;
-  }
+	}
+	
+function display_success($success="") {
+	$output='';
+	if($success!='') {
+		$output .= "<div class=\"alert\">";
+		$output .= "<span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">&times;</span> ";
+		$output .= "<strong>Success !! </strong> ";
+		$output .=$success;
+		$output .=" </div>";
+	}
+	return $output;
+}
+
   
   function get_and_clear_session_message() {
 	if(isset($_SESSION['message']) && $_SESSION['message'] != '') {

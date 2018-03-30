@@ -8,7 +8,7 @@ $msg="User Already exists.";
 if(is_post_request())
 {
     $email=$_POST['email'].$_POST['emaildom'];
-    $std=find_student_by_email($email);
+    $std=find_user_by_email($email,"student");
     if(!$std) {
         $errors=[];
         $data=get_fields_and_values();
@@ -152,11 +152,11 @@ if(is_post_request())
                                             <label for="gn">Gender</label>
                                         </div>
                                         <div class="col-1-of-6">
-                                            <input type="radio" id="male" name="gen" required>
+                                            <input type="radio" id="male" name="gen" value="male" required>
                                             <label for="male">Male</label>
                                         </div>
                                         <div class="col-1-of-3">
-                                            <input type="radio" id="female" name="gen" required>
+                                            <input type="radio" id="female" name="gen" value="female" required>
                                             <label for="female">Female</label>
                                         </div>
                                     </div>

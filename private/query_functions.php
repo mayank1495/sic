@@ -1,6 +1,15 @@
 <?php
 
 
+function find_all_students() {
+    global $db;
+
+    $query="SELECT * FROM stu";
+    $result=mysqli_query($db,$query);
+    confirm_result_set($result);
+    return $result;
+}
+
 function find_student_by_email($email) {
     global $db;
 
@@ -13,6 +22,44 @@ function find_student_by_email($email) {
     $std = mysqli_fetch_assoc($result);
     return $std;
 }
+
+function has_access($user) {
+    
+    if($user['access']==1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function update_access($id,$access) {
+    global $db;
+
+    $access=$access==0?1:0;
+    $query="UPDATE stu SET access='".$access."' ";
+    $query.="WHERE id='".$id."'";
+    // echo $query;
+    $result=mysqli_query($db,$query);
+}
+
+function find_user_by_email($email,$user="") {
+    global $db;
+
+    if($user=="student"){
+        $query="SELECT * FROM stu where email='";
+    } else {
+        $query="SELECT * FROM admins where email='";
+    }
+    
+    $query.=$email;
+    $query.="'" ;
+
+    $result = mysqli_query($db,$query);
+    confirm_result_set($result);
+    $usr = mysqli_fetch_assoc($result);
+    return $usr;
+}
+
 
 function get_fields_and_values() {
     

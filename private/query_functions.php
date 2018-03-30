@@ -1,20 +1,17 @@
 <?php
 
 
-function check_if_student_exists() {
+function find_student_by_email($email) {
     global $db;
 
     $query="SELECT * FROM stu where email='";
-    $query.=$_POST['email'].$_POST['emaildom'];
+    $query.=$email;
     $query.="'" ;
 
     $result = mysqli_query($db,$query);
-    if(mysqli_num_rows($result)!=0) {
-        return true;
-        // redirect_to(url_for('/signup.php?err=1'));
-    }
-    return false;
-
+    confirm_result_set($result);
+    $std = mysqli_fetch_assoc($result);
+    return $std;
 }
 
 function get_fields_and_values() {

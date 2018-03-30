@@ -55,7 +55,6 @@ if(is_post_request())
     //     // echo display_errors($errors);
     //     // redirect_to(url_for('/signup.php?err=1'));
     // }
-}
 
 
 

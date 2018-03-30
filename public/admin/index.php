@@ -1,4 +1,5 @@
 <?php require_once('../../private/initialize.php') ?>
+<?php require_login("admin") ?>
 
 <?php include(SHARED_PATH.'/profile_header.php') ?>
 

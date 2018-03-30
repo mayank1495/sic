@@ -8,13 +8,7 @@ $login_failure_msg = "Log in was unsuccessful.";
 
 if(is_post_request())
 {
-    $query="SELECT * FROM stu where email='".$_POST['email']."'";
-    $res=mysqli_query($db,$query);
-    if(!$res)
-    {
-        exit("Database query failed.");
-    }
-    $std=mysqli_fetch_assoc($res);
+    $std=find_student_by_email($_POST['email']);
     if($std)
     {
         if(password_verify($_POST['password'],$std['pwd']))

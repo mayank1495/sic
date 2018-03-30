@@ -7,7 +7,8 @@ $msg="User Already exists.";
 
 if(is_post_request())
 {
-    $std=check_if_student_exists();
+    $email=$_POST['email'].$_POST['emaildom'];
+    $std=find_student_by_email($email);
     if(!$std) {
         $errors=[];
         $data=get_fields_and_values();
@@ -16,16 +17,6 @@ if(is_post_request())
         $errors[]=$msg;
     }
 }
-// else if(isset($_GET['err'])) {
-
-//     $err=$_GET['err']?$_GET['err']:0;
-//     if($err==1)
-//     {
-//         $errors[]=$msg;
-//         $err=0;
-//         // redirect_to('signup.php');
-//     }
-// }
 
 ?>
 

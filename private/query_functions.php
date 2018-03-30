@@ -130,13 +130,12 @@ function insert_into_stu($data) {
 function get_pwd($id,$user) {
     global $db;
 
-    if($user="student") {
+    if($user=="student") {
         $query="SELECT pwd FROM stu WHERE id='";
     }else {
         $query="SELECT pwd FROM admins WHERE id='";
     }
     $query.=$id."'";
-
     $result=mysqli_query($db,$query);
     confirm_result_set($result);
     $usr=mysqli_fetch_assoc($result);
@@ -147,7 +146,7 @@ function change_pwd($pwd,$id,$user) {
     global $db;
 
     $pwd=password_hash($pwd,PASSWORD_BCRYPT);
-    if($user="student") {
+    if($user=="student") {
         $query="UPDATE stu SET pwd='";
     }else {
         $query="UPDATE admins SET pwd='";

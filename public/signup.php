@@ -4,6 +4,7 @@
 
 $errors=[];
 $msg="User Already exists.";
+$success="";
 
 if(is_post_request())
 {
@@ -13,6 +14,7 @@ if(is_post_request())
         $errors=[];
         $data=get_fields_and_values();
         insert_into_stu($data);
+        $success="Registration complete. Please wait for Admin approval. Login to check Access.";
     } else {
         $errors[]=$msg;
     }
@@ -33,6 +35,7 @@ if(is_post_request())
                 <?php echo display_errors($errors) ?>
                     <form action="" class="form" name="form" method="post">
                         <div class="row">
+                        <?php echo display_success($success); ?>
                             <div>
                                 <h2>Important Details</h2>
                             </div>
@@ -53,7 +56,7 @@ if(is_post_request())
                                             <input type="text" class="form__input_small" placeholder="example199X" id="email" name="email" required onblur="checkEmail(this);" onkeyup="checkEmail(this);">
                                         </div>
                                         <div class="col-1-of-2">
-                                            <input list="emaildom" class="form__input_small" placeholder="@gmail.com" name="emaildom" required>
+                                            <input list="emaildom" class="form__input_small" onblur="checkList('emaildom',this);" placeholder="@gmail.com" name="emaildom" required>
                                             <datalist id="emaildom">
                                                 <option value="@gmail.com">
                                                 <option value="@btech.nitdgp.ac.in">
@@ -89,7 +92,7 @@ if(is_post_request())
                                 </div>
                                 <div class="form__group">
                                     <label for="statecol" class="form__label">State</label>
-                                    <input list="statecol" class="form__input" placeholder="State" name="statecol" required>
+                                    <input list="statecol" class="form__input" onblur="checkList('statecol',this);" placeholder="State" name="statecol" required>
                                     <datalist id="statecol">
                                         <option value="Andaman & Nicobar Islands">
                                         <option value="Andhra Pradesh" >
@@ -175,7 +178,7 @@ if(is_post_request())
                                 </div>
                                 <div class="form__group">
                                     <label for="dept" class="form__label">Department</label>
-                                    <input list="dept" class="form__input" placeholder="IT" name="dept" required>
+                                    <input list="dept" class="form__input" onblur="checkList('dept',this);" placeholder="IT" name="dept" required>
                                     <datalist id="dept">
                                       <option value="IT">
                                       <option value="CSE">
@@ -189,7 +192,7 @@ if(is_post_request())
                                 </div>
                                 <div class="form__group">
                                     <label for="session" class="form__label">Session</label>
-                                    <input list="session" class="form__input" placeholder="2015-2019" name="session" required>
+                                    <input list="session" class="form__input" onblur="checkList('session',this);" placeholder="2015-2019" name="session" required>
                                     <datalist id="session">
                                       <option value="2014-2018">
                                       <option value="2015-2019">
@@ -199,7 +202,7 @@ if(is_post_request())
                                 </div>
                                 <div class="form__group">
                                     <label for="degree" class="form__label">Degree</label>
-                                    <input list="degree" class="form__input" placeholder="BTECH" name="degree" required>
+                                    <input list="degree" class="form__input" onblur="checkList('degree',this);" placeholder="BTECH" name="degree" required>
                                     <datalist id="degree">
                                       <option value="BTECH">
                                       <option value="MTECH">
@@ -215,7 +218,8 @@ if(is_post_request())
                                             <input type="number" class="form__input_small" placeholder="15" id="rollyr" name="rollyr" step="1" min="14" max="17" required>
                                         </div>
                                         <div class="col-1-of-3">
-                                            <input list="rolld" class="form__input_small" placeholder="IT" name="rolld" required> <datalist id="rolld">
+                                            <input list="rolld" class="form__input_small" onblur="checkList('rolld',this);" placeholder="IT" name="rolld" required> 
+                                            <datalist id="rolld">
                                               <option value="IT">
                                               <option value="CSE">
                                               <option value="EE">
@@ -351,7 +355,7 @@ if(is_post_request())
                                 <div class="col-1-of-2">
                                     <div class="form__group">
                                         <label for="board12" class="form__label">Board</label>
-                                        <input type="text" class="form__input" placeholder="CBSE/WBSSE/ICSC" id="board12" name="board12" required>
+                                        <input type="text" class="form__input" onblur="checkString(this);" onkeyup="checkString(this);" placeholder="CBSE/WBSSE/ICSC" id="board12" name="board12" required>
                                     </div>
                                     <div class="form__group">
                                         <label for="scname12" class="form__label">School Name</label>
@@ -367,7 +371,7 @@ if(is_post_request())
                                     </div>
                                     <div class="form__group">
                                     <label for="state12" class="form__label">State</label>
-                                    <input list="state12" class="form__input" placeholder="State" name="state12" required>
+                                    <input list="state12" class="form__input" onblur="checkList('state12',this);" placeholder="State" name="state12" required>
                                     <datalist id="state12">
                                         <option value="Andaman & Nicobar Islands">
                                         <option value="Andhra Pradesh" >
@@ -430,7 +434,7 @@ if(is_post_request())
                                 <div class="col-1-of-2">
                                     <div class="form__group">
                                         <label for="board11" class="form__label">Board</label>
-                                        <input type="text" class="form__input" placeholder="CBSE/WBSSE/ICSC" id="board11" name="board11" required>
+                                        <input type="text" class="form__input" onblur="checkString(this);" onkeyup="checkString(this);" placeholder="CBSE/WBSSE/ICSC" id="board11" name="board11" required>
                                     </div>
                                     <div class="form__group">
                                         <label for="scname11" class="form__label">School Name</label>
@@ -446,7 +450,7 @@ if(is_post_request())
                                     </div>
                                     <div class="form__group">
                                     <label for="state11" class="form__label">State</label>
-                                    <input list="state11" class="form__input" placeholder="1State" name="state11" required>
+                                    <input list="state11" class="form__input" onblur="checkList('state11',this);" placeholder="State" name="state11" required>
                                     <datalist id="state11">
                                         <option value="Andaman & Nicobar Islands">
                                         <option value="Andhra Pradesh" >

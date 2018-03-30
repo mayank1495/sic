@@ -70,6 +70,18 @@ var disSg = function (form) {
     // document.getElementById(`sg${i}`).disabled = true;
 }
 
+var checkList = function(id,form) {
+    var options = document.getElementById(id).options;
+    var input = form.value;
+    var flg=false;
+    for(var i=0;i<options.length;i++) {
+        if(input==options[i].value) {
+            flg=true;
+        }
+    }
+    setInvalid(!flg,form);
+}
+
 // var colorit = function () {
     // var access=document.querySelector(".std_access");
     var access=document.getElementsByClassName('std_access');

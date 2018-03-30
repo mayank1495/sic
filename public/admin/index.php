@@ -4,7 +4,7 @@
 require_login("admin");
 
 $student_set=find_all_students();
-$access_link=array('Approve','Unapprove');
+$access_link=array('Approve','Disapprove');
 
 // $id=$_GET['id']?$_GET['id']:0;
 

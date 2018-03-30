@@ -123,7 +123,7 @@ function insert_into_stu($data) {
     if(!$result) {
         die('Query FAILED' . mysqli_error($db));
     } else {
-    echo "Record Created";
+    // echo "Record Created";
     }
 }
 

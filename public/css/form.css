@@ -98,9 +98,16 @@ input[value]{
     color: #0b6464;
     font-size: 18px;
 }
-input[disabled]{
-    background-color: white;
+textarea#club{
+    color: #0b6464;
+    font-size: 18px;
 }
+textarea[disabled]{
+    background-color:white;
+}
+/* input[disabled]{
+    background-color: white;
+} */
 
 .form__input:focus {
     outline: none;

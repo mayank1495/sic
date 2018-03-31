@@ -2,13 +2,9 @@
 <?php require_login("student"); ?>
 
 <?php
-    $query="SELECT * FROM stu where id='".$_SESSION['std_id']."'";
-    $res=mysqli_query($db,$query);
-    if(!$res)
-    {
-        exit("Query failed..");
-    }
-    $std=mysqli_fetch_assoc($res);
+
+$std=find_user_by_id($_SESSION['std_id'],'student');
+
 ?>
 
 <?php include(SHARED_PATH . '/profile_header.php'); ?>
@@ -21,6 +17,9 @@
         </div>
         <div>
             <div class="row">
+            <style scoped>
+                input[disabled]{ background-color: white;}
+            </style>
                 <form action="" class="form" name="form" method="post">
                     <div class="row">
                         <div>
@@ -202,7 +201,8 @@
                             </div>
                             <div class="form__group">
                                 <label for="club" class="form__label">Clubs</label>
-                                <input type="text" class="form__input_med" disabled value="<?php echo $std['club'] ?>" id="club" name="club">
+                                <!-- <input type="textarea" class="form__input_med" disabled value="<?php echo $std['club'] ?>" id="club" name="club"> -->
+                                <textarea name="club" id="club" disabled  class="form__input_med"><?php echo $std['club'] ?></textarea>
                             </div>
                             <div class="form__group">
                                 <label for="sportcol" class="form__label">Sports Activities</label>

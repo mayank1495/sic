@@ -89,6 +89,14 @@ function get_fields_and_values() {
         {
             $value=password_hash($value,PASSWORD_BCRYPT);
         }
+        if($key=="club")
+        {
+            $value="";
+            foreach($_POST['club'] as $clb) {
+                $value.=$clb.",";
+            }
+            $value=rtrim($value,", ");
+        }
         $fields.=$key.",";
         $values.="'".$value."'".",";
         }
@@ -155,4 +163,36 @@ function change_pwd($pwd,$id,$user) {
     $query.="WHERE id='";
     $query.=$id."'";
     $result=mysqli_query($db,$query);
+}
+
+function update_user($id,$user) {
+    global $db;
+
+    if($user=='student'){
+        $query="UPDATE stu SET ";
+    }else {
+        $query="UPDATE admins SET ";
+    }
+    $data="";
+    foreach($_POST as $key=>$value) {
+        if($key!='submit'){
+            if($key=="club")
+            {
+                $value="";
+                foreach($_POST['club'] as $clb) {
+                    $value.=$clb.",";
+                }
+                $value=rtrim($value,", ");
+            }
+            $data.=$key."=";
+            $data.="'".$value."', ";
+        }    
+    }
+    $data=rtrim($data,", ");
+    $query.=$data;
+    $query.=" WHERE id=";
+    $query.="'".$id."'";
+    // echo $query;
+    $result=mysqli_query($db,$query);
+    return $result;
 }

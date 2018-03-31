@@ -18,7 +18,7 @@ if(isset($_GET['id']))
 
 <?php include(SHARED_PATH.'/profile_header.php') ?>
 
-<section style="height: 85vh;">
+<section style="min-height: 85vh; max-height:100%;">
 
     <div class="row">
         <table id="students">

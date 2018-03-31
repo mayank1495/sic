@@ -77,7 +77,7 @@ if(is_post_request())
                                             <label for="student">Student</label>
                                         </div>
                                         <div class="col-1-of-3">
-                                            <input type="radio" id="admin" name="user" value="admin" required checked="checked">
+                                            <input type="radio" id="admin" name="user" value="admin" required checked>
                                             <label for="admin">Admin</label>
                                         </div>
                                     </div>

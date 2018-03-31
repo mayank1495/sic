@@ -57,17 +57,29 @@ if(is_post_request())
                                         </div>
                                         <div class="col-1-of-2">
                                             <input list="emaildom" class="form__input_small" onblur="checkList('emaildom',this);" placeholder="@gmail.com" name="emaildom" required>
+                                            <!-- <select name="emaildom" class="form__input_small" style="background-color:white; width=70px"> -->
                                             <datalist id="emaildom">
                                                 <option value="@gmail.com">
+                                                    <!-- @gmail.com</option> -->
                                                 <option value="@btech.nitdgp.ac.in">
+                                                    <!-- @btech.nitdgp.ac.in</option> -->
                                                 <option value="@yahoo.co.in">
+                                                    <!-- @yahoo.co.in</option> -->
                                                 <option value="@hotmail.com">
+                                                    <!-- @hotmail.com</option> -->
                                                 <option value="@xyz.com">
+                                                    <!-- @xyz.com</option> -->
                                                 <option value="@outlook.com">
+                                                    <!-- @outlook.com</option> -->
                                                 <option value="@aol.com">
+                                                    <!-- @aol.com</option> -->
                                                 <option value="@inbox.com">
+                                                    <!-- @inbox.com</option> -->
                                                 <option value="@icloud.com">
+                                                    <!-- @icloud.com</option> -->
                                                 <option value="@microsoft.com">
+                                                    <!-- @microsoft.com</option> -->
+                                            <!-- </select> -->
                                             </datalist>
                                         </div>
                                     </div>
@@ -308,20 +320,20 @@ if(is_post_request())
                                 </div>
                                 <div class="form__group">
                                     <label for="club" class="form__label">Club Membership</label>
-                                    <input type="checkbox" name="club" value="GLUG"> GLUG &nbsp
-                                    <input type="checkbox" name="club" value="MNTC"> MNTC &nbsp
-                                    <input type="checkbox" name="club" value="SAE"> SAE &nbsp
-                                    <input type="checkbox" name="club" value="CCA"> CCA &nbsp
-                                    <input type="checkbox" name="club" value="Music_Club"> Music_Club &nbsp<br>
-                                    <input type="checkbox" name="club" value="Dance_Club"> Dance_Club &nbsp
-                                    <input type="checkbox" name="club" value="LC"> LC &nbsp
-                                    <input type="checkbox" name="club" value="Spic_Macay"> Spic_Macay &nbsp
-                                    <input type="checkbox" name="club" value="EDC"> EDC &nbsp
-                                    <input type="checkbox" name="club" value="Prakriti"> Prakriti &nbsp<br>
-                                    <input type="checkbox" name="club" value="Debating_Society"> Debating_Society &nbsp
-                                    <input type="checkbox" name="club" value="BMEP"> BMEP &nbsp
-                                    <input type="checkbox" name="club" value="Other"> Other &nbsp
-                                    <input type="checkbox" name="club" value="None"> None &nbsp<br>
+                                    <input type="checkbox" name="club[]" value="GLUG"> GLUG &nbsp;
+                                    <input type="checkbox" name="club[]" value="MNTC"> MNTC &nbsp;
+                                    <input type="checkbox" name="club[]" value="SAE"> SAE &nbsp;
+                                    <input type="checkbox" name="club[]" value="CCA"> CCA &nbsp;
+                                    <input type="checkbox" name="club[]" value="Music_Club"> Music_Club &nbsp;<br>
+                                    <input type="checkbox" name="club[]" value="Dance_Club"> Dance_Club &nbsp;
+                                    <input type="checkbox" name="club[]" value="LC"> LC &nbsp;
+                                    <input type="checkbox" name="club[]" value="Spic_Macay"> Spic_Macay &nbsp;
+                                    <input type="checkbox" name="club[]" value="EDC"> EDC &nbsp;
+                                    <input type="checkbox" name="club[]" value="Prakriti"> Prakriti &nbsp;<br>
+                                    <input type="checkbox" name="club[]" value="Debating_Society"> Debating_Society &nbsp;
+                                    <input type="checkbox" name="club[]" value="BMEP"> BMEP &nbsp;
+                                    <input type="checkbox" name="club[]" value="Other"> Other &nbsp;
+                                    <input type="checkbox" name="club[]" value="None"> None &nbsp;<br>
                                 </div>
                                 <div class="form__group">
                                     <label for="sportcol" class="form__label">Sports Activities</label>

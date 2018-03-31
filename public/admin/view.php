@@ -48,6 +48,9 @@ if(is_get_request()) {
         </div>
         <div>
             <div class="row">
+            <style scoped>
+                input[disabled]{ background-color: white;}
+            </style>
                 <form action="" class="form" name="form" method="post">
                     <div class="row">
                         <div>
